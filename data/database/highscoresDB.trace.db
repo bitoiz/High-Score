@@ -1,0 +1,382 @@
+2022-09-14 09:50:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]INTO players WHERE name = 'mikel')"
+Syntax error in SQL statement "SELECT * [*]INTO players WHERE name = 'mikel')"; SQL statement:
+SELECT * INTO players WHERE name = 'mikel') [42000-214]
+2022-09-14 09:50:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]INTO games WHERE name = 'Call of Duty')"
+Syntax error in SQL statement "SELECT * [*]INTO games WHERE name = 'Call of Duty')"; SQL statement:
+SELECT * INTO games WHERE name = 'Call of Duty') [42000-214]
+2022-09-14 09:51:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]INTO players WHERE name = 'mikel'"
+Syntax error in SQL statement "SELECT * [*]INTO players WHERE name = 'mikel'"; SQL statement:
+SELECT * INTO players WHERE name = 'mikel' [42000-214]
+2022-09-14 09:51:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * [*]INTO games WHERE name = 'Call of Duty'"
+Syntax error in SQL statement "SELECT * [*]INTO games WHERE name = 'Call of Duty'"; SQL statement:
+SELECT * INTO games WHERE name = 'Call of Duty' [42000-214]
+2022-09-14 09:52:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"
+Value too long for column "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"; SQL statement:
+INSERT INTO players (playerID, name) VALUES ('8a8bc6f1f2e6762dae7780efd335c743','mikel') [22001-214]
+2022-09-14 09:52:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "GAMEID BINARY(16)": "CAST(X'6536353630633634623532646233643338396332323164363263386435393563' AS BINA... (32)"
+Value too long for column "GAMEID BINARY(16)": "CAST(X'6536353630633634623532646233643338396332323164363263386435393563' AS BINA... (32)"; SQL statement:
+INSERT INTO games (gameID, name) VALUES ('e6560c64b52db3d389c221d62c8d595c','Call od Duty') [22001-214]
+2022-09-14 10:01:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"
+Value too long for column "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"; SQL statement:
+INSERT INTO players (playerID, name) VALUES ('8a8bc6f1f2e6762dae7780efd335c743','mikel') [22001-214]
+2022-09-14 10:01:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"
+Value too long for column "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"; SQL statement:
+INSERT INTO games (gameID, name) VALUES ('b8aa653990ab9b4c8762d6dc7a8dfce6','Call of Duty') [22001-214]
+2022-09-14 10:02:07 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-14 10:03:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"
+Value too long for column "PLAYERID BINARY(16)": "CAST(X'3861386263366631663265363736326461653737383065666433333563373433' AS BINA... (32)"; SQL statement:
+INSERT INTO players (playerID, name) VALUES ('8a8bc6f1f2e6762dae7780efd335c743','mikel') [22001-214]
+2022-09-14 10:03:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"
+Value too long for column "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"; SQL statement:
+INSERT INTO games (gameID, name) VALUES ('b8aa653990ab9b4c8762d6dc7a8dfce6','Call of Duty') [22001-214]
+2022-09-14 10:08:58 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-14 10:09:04 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-14 10:09:06 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-14 10:15:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor Invalido "0" para el parametro "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3524)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:319)
+	at highscores.DBService.getPlayerID(DBService.java:207)
+	at highscores.DBService.newHighScore(DBService.java:78)
+	at main.HighScores.main(HighScores.java:51)
+2022-09-14 10:15:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"
+Value too long for column "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"; SQL statement:
+INSERT INTO games (gameID, name) VALUES ('b8aa653990ab9b4c8762d6dc7a8dfce6','Call of Duty') [22001-214]
+2022-09-14 10:16:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No hay datos disponibles.
+No data is available [2000-214]
+2022-09-14 10:16:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"
+Value too long for column "GAMEID BINARY(16)": "CAST(X'6238616136353339393061623962346338373632643664633761386466636536' AS BINA... (32)"; SQL statement:
+INSERT INTO games (gameID, name) VALUES ('b8aa653990ab9b4c8762d6dc7a8dfce6','Call of Duty') [22001-214]
+2022-09-14 10:38:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT Games.name, GS.score FROM Games INNER [*]UNION (SELECT gameID, score FROM Scores WHERE playerID = (SELECT playerID FROM Players WHERE name = 'pep')) GS ON Players.playerID = GS.playerID ORDER BY GS.score"; se esperaba "JOIN"
+Syntax error in SQL statement "SELECT Games.name, GS.score FROM Games INNER [*]UNION (SELECT gameID, score FROM Scores WHERE playerID = (SELECT playerID FROM Players WHERE name = 'pep')) GS ON Players.playerID = GS.playerID ORDER BY GS.score"; expected "JOIN"; SQL statement:
+SELECT Games.name, GS.score FROM Games INNER UNION (SELECT gameID, score FROM Scores WHERE playerID = (SELECT playerID FROM Players WHERE name = 'pep')) GS ON Players.playerID = GS.playerID ORDER BY GS.score [42001-214]
+2022-09-14 10:39:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "PLAYERS.PLAYERID" no encontrada
+Column "PLAYERS.PLAYERID" not found; SQL statement:
+SELECT Games.name, GS.score FROM Games INNER JOIN (SELECT gameID, score FROM Scores WHERE playerID = (SELECT playerID FROM Players WHERE name = 'pep')) GS ON Players.playerID = GS.playerID ORDER BY GS.score [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.expression.condition.Comparison.optimize(Comparison.java:139)
+	at org.h2.expression.Expression.optimizeCondition(Expression.java:148)
+	at org.h2.command.query.Select.prepareExpressions(Select.java:1177)
+	at org.h2.command.query.Query.prepare(Query.java:218)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:92)
+	at highscores.DBService.highScoresByPlayer(DBService.java:119)
+	at main.HighScores.main(HighScores.java:60)
+2022-09-15 21:30:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No hay datos disponibles.
+No data is available [2000-214]
+2022-09-15 21:33:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No hay datos disponibles.
+No data is available [2000-214]
+2022-09-16 13:29:25 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-16 13:29:47 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:395)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:125)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:3318)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:593)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:469)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4082)
+	at org.h2.mvstore.db.Store.<init>(Store.java:136)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1033)
+	at org.h2.server.web.WebApp.process(WebApp.java:226)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]" [50000-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:554)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: /Volumes/MIKALDAZ32/docencia/Programacion.Segura/contenidos.asignatura/codigo/HighScores/data/database/highscoresDB.mv.db [2.1.214/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+	at org.h2.mvstore.FileStore.open(FileStore.java:178)
+	at org.h2.mvstore.FileStore.open(FileStore.java:128)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:452)
+	... 16 more
+2022-09-16 13:40:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "PLAYERID" no encontrada
+Column "PLAYERID" not found; SQL statement:
+INSERT INTO players (playerID, name) VALUES ('iovG8fLmdi2ud4Dv0zXHQw==','mikel') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:186)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:143)
+	at highscores.DBService.newPlayer(DBService.java:218)
+	at main.HighScores.main(HighScores.java:90)
+2022-09-19 12:45:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:49:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:50:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:50:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:54:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:57:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 12:59:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: El objeto ya está cerrado
+The object is already closed [90007-214]
+2022-09-19 18:49:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]TABLE Players"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]TABLE Players"; expected "identifier"; SQL statement:
+DELETE TABLE Players [42001-214]
+2022-09-19 18:49:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]TABLE Games"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]TABLE Games"; expected "identifier"; SQL statement:
+DELETE TABLE Games [42001-214]
+2022-09-19 18:49:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]DELTE TABLE Scores"; se esperaba "DELETE, DROP, DECLARE, DEALLOCATE"
+Syntax error in SQL statement "[*]DELTE TABLE Scores"; expected "DELETE, DROP, DECLARE, DEALLOCATE"; SQL statement:
+DELTE TABLE Scores [42001-214]
+2022-09-19 18:49:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* TABLE Players"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* TABLE Players"; expected "identifier"; SQL statement:
+DELETE * TABLE Players [42001-214]
+2022-09-19 18:49:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* TABLE Games"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* TABLE Games"; expected "identifier"; SQL statement:
+DELETE * TABLE Games [42001-214]
+2022-09-19 18:49:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE [*]* TABLE Scores"; se esperaba "identifier"
+Syntax error in SQL statement "DELETE [*]* TABLE Scores"; expected "identifier"; SQL statement:
+DELETE * TABLE Scores [42001-214]
